@@ -1,3 +1,17 @@
+.container{
+    text-align: center;
+}
 .card{
     display: flex;
+    gap: 2rem;
+    text-align: center;
+    justify-content: center;
+    background-image: radial-gradient(white, rgba(7, 97, 199, 0.76));
+    padding: 3rem 0rem;
+    width: 450px;
+    margin: 4rem auto;
+    border: 1px solid black;
+    box-shadow: rgba(7, 97, 199, 0.623) 5px 5px, rgba(7, 97, 199, 0.568) 10px 10px, rgba(7, 97, 199, 0.507) 15px 15px, rgba(7, 97, 199, 0.445) 20px 20px, rgba(7, 97, 199, 0.274) 25px 25px;
+    border-radius: 5px;
+
 }

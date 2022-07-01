@@ -9,9 +9,9 @@ const Random = () => {
     useEffect(() => {
       axios.get(baseUrl).then((response) =>{
           setGetUSer(response.data.results)
-          console.log(response);
         })
     }, [])
+
     const UserGenerate = () =>{
       window.location.reload(false);
     }
@@ -19,19 +19,19 @@ const Random = () => {
     // console.log(getUser);
     
   return (
-    <div>
+    <div className="container">
       {
-        getUser?.map((e) => {
+        getUser?.map((e,i) => {
           console.log(e);
           return(
-            <div className="card">
-              <div>
-              <img src={e.picture.large} alt="" />
+            <div className="card" key={i}>
+              <div className="img-container">
+              <img className="img" src={e.picture.large} alt="" />
               </div>
               <div>
                 <p>{e.name.title} {e.name.first} {e.name.last}</p>
                 <p>{e.email}</p>
-                <p>e.phone</p>
+                <p>{e.phone}</p>
                 <p>{e.location.state} - {e.location.country}</p>
                 <p>{e.dob.age}</p>
                 <p>{e.registered.date}</p>
