@@ -13,5 +13,11 @@
     border: 1px solid black;
     box-shadow: rgba(7, 97, 199, 0.623) 5px 5px, rgba(7, 97, 199, 0.568) 10px 10px, rgba(7, 97, 199, 0.507) 15px 15px, rgba(7, 97, 199, 0.445) 20px 20px, rgba(7, 97, 199, 0.274) 25px 25px;
     border-radius: 5px;
+}
 
+.btn{
+    border: none;
+    padding: 1rem;
+    background-color: rgb(0, 119, 255);
+    border-radius: 10px;
 }

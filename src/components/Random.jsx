@@ -40,7 +40,7 @@ const Random = () => {
           )
         })
       }
-      <button onClick={UserGenerate}>Create User</button>
+      <button className="btn" onClick={UserGenerate}>Create User</button>
     </div>
   )
 }
