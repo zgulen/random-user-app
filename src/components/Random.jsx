@@ -1,25 +1,29 @@
 import axios from "axios"
 import { useState, useEffect } from "react"
 import "./random.css"
+import Mail from "../assets/email.svg"
+import Phone from "../assets//phone.svg"
+import Location from "../assets/location.svg"
+
 const baseUrl = "https://randomuser.me/api/"
 
 const Random = () => {
   const [getUser, setGetUSer] = useState()
+  const [change, setChange] = useState(0)
   
     useEffect(() => {
       axios.get(baseUrl).then((response) =>{
           setGetUSer(response.data.results)
         })
-    }, [])
+    }, [change])
 
     const UserGenerate = () =>{
-      window.location.reload(false);
+      setChange(change + 1)
     }
-      
-    // console.log(getUser);
     
   return (
     <div className="container">
+      
       {
         getUser?.map((e,i) => {
           console.log(e);
@@ -27,6 +31,9 @@ const Random = () => {
             <div className="card" key={i}>
               <div className="img-container">
               <img className="img" src={e.picture.large} alt="" />
+              <img className="icons" src={Mail} alt="" />
+              <img className="icons" src={Phone} alt="" />
+              <img className="icons" src={Location} alt="" />
               </div>
               <div>
                 <p>{e.name.title} {e.name.first} {e.name.last}</p>

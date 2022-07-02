@@ -7,9 +7,9 @@
     text-align: center;
     justify-content: center;
     background-image: radial-gradient(white, rgba(7, 97, 199, 0.76));
-    padding: 3rem 0rem;
+    padding: 2.5rem 0rem;
     width: 450px;
-    margin: 4rem auto;
+    margin: 3rem auto;
     border: 1px solid black;
     box-shadow: rgba(7, 97, 199, 0.623) 5px 5px, rgba(7, 97, 199, 0.568) 10px 10px, rgba(7, 97, 199, 0.507) 15px 15px, rgba(7, 97, 199, 0.445) 20px 20px, rgba(7, 97, 199, 0.274) 25px 25px;
     border-radius: 5px;
@@ -20,4 +20,18 @@
     padding: 1rem;
     background-color: rgb(0, 119, 255);
     border-radius: 10px;
+}
+.img-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.img{
+    border-radius: 50%;
+}
+.icons{
+    width: 50px;
 }
